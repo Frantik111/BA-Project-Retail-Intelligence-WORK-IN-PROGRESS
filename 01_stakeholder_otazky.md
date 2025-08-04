@@ -42,14 +42,25 @@
 - Aké máme obmedzenia (technické, právne, finančné)?
 > Technické
 >
-> Nositelné zariadenia chránia svojho majiteľa rozličnými technikami - zmena mac adresy, maskovanie signálu. Nepresnosť merania kvôli prostrediu, rozličným typom zariadení. Zákazník môže mať viac zariadení, prípadne môžu byť vypnuté tieto zariadenia. Rozličné spracovanie údajov pri rozličných množstvách klientov.
+> Nositelné zariadenia chránia svojho majiteľa rozličnými technikami - zmena mac adresy, maskovanie signálu. Nepresnosť merania kvôli prostrediu, rozličným typom zariadení. Zákazník môže mať viac zariadení, prípadne môžu byť vypnuté tieto zariadenia. Rozličné spracovanie údajov pri rozličných množstvách klientov. Ryziko na sorftwarovej stranke že bude problém s antivírusom - nutné manualne definovať výnimku.
 >
 > Právne
 >
 > Klienta nemôžeme jednoznačne identifkovať kvôli GDPR, avšak môžeme použiť rozličné metódy anonimizácie, v rozličných stupňoch spracovania údajov môžu byť požité rozličné techniky anonimizácie. Klienti musia upraviť svoje GDPR.
 >
 > Finančné
+> 
 > Rozpočet na realizáciu sú desiatky euro, všetko čo je možné rozložiť do iných divízií firmy.
+- Aké minimálne dáta sú pre klienta zmysluplné, aby mal pocit „že to funguje“?
+> Klient vydí krivku návštevnosti s orientačným počtom zákazníkov.
+- Čo by malo byť súčasťou „prehľadného výstupu“?
+> Počty, Trendy, Porovnanie s predchádzajúcim obdobím, porovnanie v segmente. Všetky ďaľšie informácie sú už spoplatnené.
+- Budú zákazníci ochotní (alebo schopní) inštalovať softvér na svoje zariadenia sami?
+> Cieľ je spraviť čo najjednoduchší proces, ktorý sa skladá z vytvorenia si konta na našom portáli, inštalácia PWA aplikácie inštalácia aplikácie bežiacej v pozadí windowsu. 
+- Potrebujeme pripraviť štandardný GDPR text pre klienta?
+> Až v neskoršej fáze, v testovacej fáze postačí aktuálne platný GDPR text, ktoré predajne už majú.
+- Chceme informovať zákazníka, že jeho zariadenie môže byť zaznamenané?
+> Predajne už majú aktuálne GDPR s počítaním - test realizujeme na predajni kde sa už uskutočnujú prieskumy návštevnosti
 
 
 ## ⚙️ Realizačné otázky na náš technický tým - koncepcia (ako to robíme?)
