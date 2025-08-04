@@ -1,4 +1,4 @@
-# 📡 Retail-Intelligence---Bussines-analytics - MVP
+# 📡 Retail-Intelligence - Bussines-analytics - MVP
 
 Cieľom tohto projektu je overiť, či jednoduchý Bluetooth sniffer dokáže zbierať a spracovávať údaje o pohybe zákazníkov v maloobchodných prevádzkach.
 
