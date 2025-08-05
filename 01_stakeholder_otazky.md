@@ -44,7 +44,7 @@
 > Technické
 >
 > Nositelné zariadenia chránia svojho majiteľa rozličnými technikami - zmena mac adresy, maskovanie signálu. Nepresnosť merania kvôli prostrediu, rozličným typom zariadení. Zákazník môže mať viac zariadení, prípadne môžu byť vypnuté tieto zariadenia. Rozličné spracovanie údajov pri rozličných množstvách klientov. Ryziko na sorftwarovej stranke že bude problém s antivírusom - nutné manualne definovať výnimku.
-> Ďalej návštevníci sú rozdielny, preto aj ich zariadenia sú rozdielne, dokážeme zmerať len veľmi malú časť zariadení, zvyšok bude dopočítavaný vďaka algoritmu, ktorý je vytvorený na základe korelácie údajov zo senzorov a manuálneho počítania.
+> Ďalej návštevníci sú rozdielny, preto aj ich zariadenia sú rozdielne, dokážeme zmerať len veľmi malú časť zariadení, zvyšok bude dopočítavaný (upsampling) vďaka algoritmu, ktorý je vytvorený na základe korelácie údajov zo senzorov a manuálneho počítania. 
 >
 > Právne
 >
