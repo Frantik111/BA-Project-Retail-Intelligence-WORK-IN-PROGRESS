@@ -1,4 +1,4 @@
-##Riešenie sa skladá
+## Riešenie sa skladá
 - software na počítači
 - prenos údajov na spracovanie
 - spracovanie údajov
