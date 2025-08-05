@@ -8,25 +8,25 @@
 
 ## 🎯 Biznisové otázky (prečo to robíme?)
 - Aký problém sa týmto snažíme riešiť?
-> Overujeme koncept či je možné merať návštevnosť zákazníkov len softwarom na počítači s windows a bluetooth.
+> Overujeme koncept či je možné merať návštevnosť zákazníkov len softwarom na počítači s windows a bluetooth. Tak aby sme vedeli ponúknuť nízkonákladové riešenie na monitoring správania sa zákazníkov.
 - Pre koho majú byť výstupy určené?
-> Prvé MVP pre interné zhodnotenie realizovateľnosti
+> Podľa etáp projektu, v testovacej fáze pre analýzu údajov či je možné stanoviť s určitou presnosťou návštevnosť a či má zmysel dodať MVP koncovému klientovi.
 - Aký konkrétny prínos očakávam ako vlastník predajne?
-> Viem koľko ľudí mi navštívilo predajni, nemusím robiť manuálnu evidenciu, viem prideliť podľa návštevnosti množstvo personálu, viem zhodnotiť reklamnú akciu, viem posúdiť či som v porovnaní s predhcádzajúcimi rokmi dosiahol rovnakú návštevnosť.
+> Viem približne koľko ľudí mi navštívilo predajňu, nemusím robiť manuálnu evidenciu, viem prideliť podľa návštevnosti množstvo personálu, viem zhodnotiť reklamnú akciu, viem posúdiť či som v porovnaní s predhcádzajúcimi rokmi dosiahol rovnakú návštevnosť.
 - Aký konkrétny prínos očakáva prevádzkovateľ nákupného centra?
 > Vďaka zapojeniu viacerých predajní: Meranie návštevnosti, zvýšenie bezpečnosti nákupného centra mimo otváracích hodín, nepredvídateľné pohyby zákazníkov, vyhodnotenie sezuóných špičiek a akcií.
 - Ako viem, že sa zákazník správal „zaujímavo“?
-> Čas strávený na predajni, v prípade viac senzorov (zákazník môže použiť viac počítačov) môžeme vyhodnocovať preferované časti predajne, opakovanie návštev???
+> Čas strávený na predajni, v prípade viac senzorov (zákazník môže použiť viac počítačov) môžeme vyhodnocovať preferované časti predajne, opakovanie návštev, všetky metódy je nutné časom preskúmať.
 - Môže táto metóda nahradiť alebo doplniť iný prieskum?
-> Túto metódu zberu musíme overiť maunálnym zberom, prípadne ho môžeme obohatiť o črty zákazníka, prípadne kolerovať s obratom na prevádzke.
+> Túto metódu zberu musíme overiť maunálnym zberom, prípadne ho môžeme obohatiť o črty zákazníka, prípadne kolerovať s obratom na prevádzke. Mohol by nahradiť manuálne rátanie alebo nákladné technické riešenia konkurencie.
 - Prečo to práve teraz potrebujeme?
-> Vieme otestovať či to má zmysel vôbec robiť, v neskoršej fáze by boli nutné iné nákladné technické riešenia na budovanie Retail intelligence.
+> Chceme vstúpiť na Retail intelligence, v súčastnosti je trend k nárastu werable zariadení, ideálny čas na experimenty.
 - Čo sa zmení, ak to budeme mať?
-> Spoznáme limity technológie, zadefinujeme klúčové benefity pre klienta.
+> Môžeme získať veľké množstvo klientov po celom svete zároveň otestujeme limity technológie, zadefinujeme klúčové benefity pre klienta.
 - Kto bude výstupy používať?
 > V prvom rade naše technické oddelenie, po analýze a nastavení kriviek uvidí zákazník údaje.
 - Ako to pomôže pri rozhodovaní?
-> Zákazník vie plánovať, kontolovať. Na našej strane vieme plánovať investície do rozvoja Retail intelligence.
+> Po prvých testoch zistíme živatoschopnosť riešenia či údaje sú relevantné. Zákazník vie plánovať, kontolovať.
 - Čo je hlavná pridaná hodnota?
 > Pri prakticky nulových nákladoch môžem nahradiť manuálnu evidenciu či iné komplexné riešenia.
 - Aký formát výstupu očakávaš?
@@ -39,14 +39,17 @@
 > Keď dokážeme zachytené údaje spracovať tak aby sme vedeli porovnať s mauálnym rátaním - definovali sme sa či je to v akceptovateľnej odchylke, vedeli identifikovať črty správania.
 - Existuje príklad, ktorý ťa inšpiroval?
 > Kamerové počítanie zákazníkov
+> [dôr](https://www.getdor.com/solutions/people-counting)
 - Aké máme obmedzenia (technické, právne, finančné)?
 > Technické
 >
 > Nositelné zariadenia chránia svojho majiteľa rozličnými technikami - zmena mac adresy, maskovanie signálu. Nepresnosť merania kvôli prostrediu, rozličným typom zariadení. Zákazník môže mať viac zariadení, prípadne môžu byť vypnuté tieto zariadenia. Rozličné spracovanie údajov pri rozličných množstvách klientov. Ryziko na sorftwarovej stranke že bude problém s antivírusom - nutné manualne definovať výnimku.
+> Ďalej návštevníci sú rozdielny, preto aj ich zariadenia sú rozdielne, dokážeme zmerať len veľmi malú časť zariadení, zvyšok bude dopočítavaný vďaka algoritmu, ktorý je vytvorený na základe korelácie údajov zo senzorov a manuálneho počítania.
 >
 > Právne
 >
 > Klienta nemôžeme jednoznačne identifkovať kvôli GDPR, avšak môžeme použiť rozličné metódy anonimizácie, v rozličných stupňoch spracovania údajov môžu byť požité rozličné techniky anonimizácie. Klienti musia upraviť svoje GDPR.
+> [odporúčania na gdpr spraocvanie údajov](https://copilot.microsoft.com/shares/vtV1TFUdzsSLco3cjezjV)
 >
 > Finančné
 > 
