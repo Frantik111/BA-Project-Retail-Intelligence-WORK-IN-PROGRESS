@@ -1,4 +1,6 @@
 ## Časový plán MVP systému merania návštevnosti
+Časový plán je vytvorený len na prvý krok - čiže testovaciu fázu zberu a vyhodnotenia údajov či je možné vytvoriť tento typ produktu.
+
 🟡 Fáza 1: Príprava a analýza (1 týždeň)
 Rozhovor so stakeholderom (objasnenie požiadaviek) - Zdenko	
 Zber existujúcich technických možností (Bluetooth/WiFi sken) - Technik
