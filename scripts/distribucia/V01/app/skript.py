@@ -1,6 +1,7 @@
 
 from flask import Flask, jsonify
 from bleak import BleakScanner
+from bleak.backends.winrt import WinRTBLEDevice
 
 import asyncio
 import sqlite3
@@ -105,17 +106,34 @@ def scan_ble():
 
     if devices:
         for d in devices:
-            # Metadata môže byť slovník s rôznymi kľúčmi
-            metadata_info = ", ".join([f"{k}: {v}" for k, v in d.metadata.items()])
-            info = (
-                f"Name: {d.name}, "
-                f"MAC: {d.address}, "
-                f"RSSI: {d.rssi}, "
-                f"Metadata: {metadata_info}"
-            )
+            try:
+                info = (
+                    f"Name: {d.name}, "
+                    f"MAC: {d.address}, "
+                    f"RSSI: {d.rssi}"
+                )
+
+                # Ak bežíš na Windows a ide o WinRTBLEDevice
+                if isinstance(d, WinRTBLEDevice):
+                    advertisement = d.details.advertisement
+                    manufacturer_data = advertisement.manufacturer_data
+                    local_name = advertisement.local_name
+
+                    info += (
+                        f", LocalName: {local_name}, "
+                        f"ManufacturerData: {manufacturer_data}"
+                    )
+                else:
+                    # fallback ak by to náhodou nebolo WinRT
+                    info += f", RawDetails: {str(d.details)}"
+
+            except Exception as e:
+                info = f"Details error: {e}"
+
             save_to_db(info, "blue")
     else:
         save_to_db("No BLE devices found.", "blue")
+
 
 def background_ble_scanner():
     while True:
@@ -138,3 +156,4 @@ if __name__ == "__main__":
     
 
 #distribucia pynsist
+
