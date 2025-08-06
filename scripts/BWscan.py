@@ -26,20 +26,20 @@ def background_scanner():
         if resultblue.returncode == 0:
             output = resultblue.stdout.strip()
             if output:
-                save_to_db(output)
+                save_to_db(output, "blue")
             else:
-                save_to_db("No Bluetooth devices found.")
+                save_to_db("No Bluetooth devices found.", "blue")
         else:
-            save_to_db(f"Error B: {resultblue.stderr}")
+            save_to_db(f"Error B: {resultblue.stderr}", "blue")
         
         if resultwifi.returncode == 0:
             output = resultwifi.stdout.strip()
             if output:
-                save_to_db(output)
+                save_to_db(output, "wifi")
             else:
-                save_to_db("No WIFI devices found.")
+                save_to_db("No WIFI devices found.", "wifi")
         else:
-            save_to_db(f"Error W: {resultwifi.stderr}")
+            save_to_db(f"Error W: {resultwifi.stderr}", "wifi")
         time.sleep(5)  # každých 5 sekúnd
 
 
@@ -71,24 +71,35 @@ def init_db():
             output TEXT
         )
     """)
+    c.execute("""
+        CREATE TABLE IF NOT EXISTS logswifi (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            timestamp TEXT,
+            output TEXT
+        )
+    """)
     conn.commit()
     conn.close()
 
-def save_to_db(output):
+def save_to_db(output, table):
     conn = sqlite3.connect("logs.db", check_same_thread=False)
     c = conn.cursor()
     timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-    c.execute("INSERT INTO logs (timestamp, output) VALUES (?, ?)", (timestamp, output))
+    if table == "blue":
+        c.execute("INSERT INTO logs (timestamp, output) VALUES (?, ?)", (timestamp, output))
+    if table == "wifi":
+        c.execute("INSERT INTO logswifi (timestamp, output) VALUES (?, ?)", (timestamp, output))
     conn.commit()
     conn.close()
 
-
-# po spustení
-init_db()
+# uprava pre pynsist 
+def main():
+    init_db()
+    app.run(port=5000)
 
 
 if __name__ == "__main__":
-    app.run(port=5000)
+    main()
     
     
 #distribucia pynsist
