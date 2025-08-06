@@ -1,5 +1,8 @@
 
 from flask import Flask, jsonify
+from bleak import BleakScanner
+
+import asyncio
 import sqlite3
 import subprocess
 import threading
@@ -46,7 +49,7 @@ def background_scanner():
 
 
 # Spustenie vlákna pri štarte aplikácie
-threading.Thread(target=background_scanner, daemon=True).start()
+# threading.Thread(target=background_scanner, daemon=True).start()
 
 # Endpoint na získanie aktuálneho výstupu
 
@@ -94,9 +97,38 @@ def save_to_db(output, table):
     conn.commit()
     conn.close()
 
+
+def scan_ble():
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    devices = loop.run_until_complete(BleakScanner.discover())
+
+    if devices:
+        for d in devices:
+            # Metadata môže byť slovník s rôznymi kľúčmi
+            metadata_info = ", ".join([f"{k}: {v}" for k, v in d.metadata.items()])
+            info = (
+                f"Name: {d.name}, "
+                f"MAC: {d.address}, "
+                f"RSSI: {d.rssi}, "
+                f"Metadata: {metadata_info}"
+            )
+            save_to_db(info, "blue")
+    else:
+        save_to_db("No BLE devices found.", "blue")
+
+def background_ble_scanner():
+    while True:
+        try:
+            scan_ble()
+        except Exception as e:
+            save_to_db(f"BLE scan error: {str(e)}", "blue")
+        time.sleep(5)
+
 # uprava pre pynsist 
 def main():
     init_db()
+    threading.Thread(target=background_ble_scanner, daemon=True).start()
     app.run(port=5000)
 
 
@@ -104,4 +136,5 @@ if __name__ == "__main__":
     main()
     
     
+
 #distribucia pynsist
