@@ -3,6 +3,7 @@ setlocal EnableDelayedExpansion
 
 echo [1/3] Inštalujem Flask...
 call "%~dp0winpython\python-3.12.3\python.exe" -m pip install flask
+call "%~dp0winpython\python-3.12.3\python.exe" -m pip install pybluez2
 
 echo [2/3] Vytváram odkaz...
 powershell -Command ^
