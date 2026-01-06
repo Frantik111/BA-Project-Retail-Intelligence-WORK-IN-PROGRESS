@@ -1,3 +1,6 @@
+#WORK-IN-PROGRESS#
+Tento projekt je v ranom štádiu vývoja a aktuálne slúži ako experimentálny prototyp. Neusiluje o 100 % spoľahlivosť; jeho účelom je poskytnúť jednoduchý vstupný nástroj, ktorý používateľovi okamžite prinesie základnú hodnotu a zároveň ho prirodzene nasmeruje k pokročilejším službám v budúcnosti.
+
 # 📡 Retail-Intelligence - Bussines-analytics - MVP
 
 Cieľom tohto projektu je overiť, či jednoduchý Bluetooth sniffer dokáže zbierať a spracovávať údaje o pohybe zákazníkov v maloobchodných prevádzkach.
