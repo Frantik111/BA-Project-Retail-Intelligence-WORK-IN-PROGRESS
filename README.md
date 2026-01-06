@@ -1,4 +1,5 @@
-#WORK-IN-PROGRESS#
+# WORK-IN-PROGRESS
+
 Tento projekt je v ranom štádiu vývoja a aktuálne slúži ako experimentálny prototyp. Neusiluje o 100 % spoľahlivosť; jeho účelom je poskytnúť jednoduchý vstupný nástroj, ktorý používateľovi okamžite prinesie základnú hodnotu a zároveň ho prirodzene nasmeruje k pokročilejším službám v budúcnosti.
 
 # 📡 Retail-Intelligence - Bussines-analytics - MVP
@@ -19,8 +20,7 @@ Cieľom tohto projektu je overiť, či jednoduchý Bluetooth sniffer dokáže zb
 Pozri jednotlivé `.md` súbory pre detailný popis jednotlivých fáz.
 
 ## 👤 Autor
-Zdenko Siegel  
-Biznis analytik (self-assigned stakeholder)
+Zdenko Siegel - BA (self-assigned stakeholder)
 
 ## 📜 License
 
